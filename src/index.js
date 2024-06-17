@@ -8,6 +8,8 @@ const cors = require("cors");
 dotenv.config();
 
 
+
+
 console.log("MongoDB URI:", process.env.MONGO_URL);  // Debugging line
 console.log("Secret Key:", process.env.SECRET_KEY);  // Debugging line
 
@@ -26,7 +28,7 @@ app.get("/", (req, res) => {
   res.send("NOTES API FROM PRIYANSU");
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 
 mongoose.connect(process.env.MONGO_URL)
   .then(() => {
